@@ -1,2 +1,3 @@
-public class Actor implements Contenido {
+public class Actor {
+
 }

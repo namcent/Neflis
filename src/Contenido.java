@@ -1,3 +1,6 @@
 public interface Contenido {
-    public String getGenero();
+    public String genero(Contenido contenido);
+    //public Integer duracion(Contenido contenido);
+    public Boolean fueVistoCompletaX(Usuario usuario);
 }
+
