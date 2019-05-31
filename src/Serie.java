@@ -1,32 +1,24 @@
+
 import java.util.List;
 
 public class Serie implements Contenido{
+
     String nombreSerie;
     Integer numTemporada;
-    Integer capxTemporada;
-    String[] actoresSerie;
-    String[] actoresInvitadoSerie;
-    Integer minxCap;
-    Integer estaCompleto;
-
-    public Series(String nombreSerie, String[] actoresSerie,
-                  String[] actoresInvitadoSerie, Integer numTemporada,
-                  Integer capxTemporada, Integer minxCap) {
-        this.nombreSerie = nombreSerie;
-        this.actoresSerie = actoresSerie;
-        this.actoresInvitadoSerie = actoresInvitadoSerie;
-        this.numTemporada = numTemporada;
-        this.capxTemporada = capxTemporada;
-        this.minxCap = minxCap;
-    }
+    private List<Temporada> temporada;
     private String genero;
 
 
-    private List<Temporada> temporada;
+    public String genero(Contenido contenido) { return genero;}
 
-    public Boolean fueVistoCompletaX(Usuario usuario) {
+    public Serie(String nombreSerie,Integer numTemporada) {
+        this.nombreSerie = nombreSerie;
+        this.numTemporada = numTemporada;
+    }
+
+    public Boolean fueVistoCompletoPor(Usuario usuario) {
         return this.temporada.stream().
-                allMatch( T -> T.fueVistoCompletaX( usuario ) );
+                allMatch( T -> T.fueVistoCompletoPor( usuario ) );
     }
 
     public String getGenero() {

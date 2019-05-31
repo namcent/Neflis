@@ -1,7 +1,7 @@
 public class Capitulo {
-    public Boolean fueVistoCompletaX(Usuario usuario) {
-        return this.capitulo.stream().
-        //Falto completar
+
+    public Boolean fueVistoCompletoPor(Usuario usuario) {
+        return true;
 
     }
 }
