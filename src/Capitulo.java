@@ -1,7 +1,10 @@
-public class Capitulo {
+public class Capitulo extends ContenidoUnitario {
+    Integer duracionXCap;
 
-    public Boolean fueVistoCompletoPor(Usuario usuario) {
-        return true;
-
+    public Capitulo (Integer duracionXCap) {
+        this.duracionXCap= duracionXCap;
     }
+
+    public Integer getDuracionXCap() {
+        return duracionXCap;}
 }
