@@ -19,14 +19,20 @@ public class Temporada implements Contenido {
     // public Integer duracion(Contenido contenido){return capitulo.stream().map( Capitulo::getDuracionxCap()) ;}
     public Boolean fueVistoCompletaX(Usuario usuario) {
         return this.capitulo.stream().
-                allMatch( Capitulo -> Capitulo.fueVistoCompletaX( usuario ) );
+                allMatch( capitulo -> capitulo.fueVistoCompletaX( usuario ) );
     }
     public String genero(Contenido contenido) {
         return genero;
     }
 
+    /**obtengo duracion de cada capitulo sumado**/
     public Integer duracion(){
         return capitulo.stream().map( c -> c.duracion() ).reduce( 0, Integer::sum );
 
-    }}
+    }
+    public Capitulo ultimoCapituloSerie(){
+        return capitulo.get(capitulo.size()-1);
+    }
+
+}
 

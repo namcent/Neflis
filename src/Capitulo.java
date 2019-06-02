@@ -16,12 +16,14 @@ public class Capitulo extends ContenidoUnitario{
     public String genero(Contenido contenido) {
      return genero;}
 
+     /**tengo duracion de un capitulo**/
     public void setDuracion(Integer minutos) {
         duracion = duracion;
     }
     public Integer duracion() {
         return this.duracion;
     }
+
     protected Boolean generoMasVisto(){return generoMasVisto();}}
 
 

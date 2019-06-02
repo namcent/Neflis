@@ -14,7 +14,7 @@ public class Pelicula extends ContenidoUnitario{
     public String genero(Contenido contenido) {
         return genero;}
 
-    public void setDuracion(Integer min) {duracion=duracion;}
+    //public void setDuracion(Integer min) {duracion=duracion;}
     public Integer duracion() {
         return duracion;
     }

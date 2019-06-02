@@ -33,15 +33,19 @@ public class Main {
         List<Contenido>contenidoVisto=new ArrayList<>(  );
         contenidoVisto.add(breakingBad);
         contenidoVisto.add(titanic);
-
+        //breakingBad.fueVistoCompletaX( yaz );
         yaz.setContenidoVisto(contenidoVisto);
+        yaz.getContenidoVisto();
+        //yaz.vioContenidoCompleto( breakingBad );
+
+        /** ejercicio 2**/
         breakingBad.duracion();
-        //titanic.setDuracion(240);
         titanic.duracion();
 
-        yaz.getContenidoVisto();
-
-        System.out.println(yaz.getContenidoVisto());
+        //System.out.println(yaz.vioContenidoCompleto( breakingBad )+ " vio cont completo de bb");
         System.out.println(breakingBad.duracion()+ " duracion de cap Breaking bad");
         System.out.println(titanic.duracion()+" duracion titanic");
+
+        breakingBad.ultimoCapituloSerie();
+        System.out.println( breakingBad.ultimoCapituloSerie().numeroCap+ " Ultimo capitulo de la serie" );
     }}

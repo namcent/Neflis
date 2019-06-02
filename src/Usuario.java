@@ -7,7 +7,6 @@ public class Usuario {
 
     public Boolean vioContenidoCompleto(Contenido contenido) {return contenido.fueVistoCompletaX(this);
     }
-    //public Usuario();
 
 
     public List<Contenido> getContenidoVisto() {
