@@ -5,18 +5,15 @@ public class Usuario {
     public Contenido contenido;
     //Aca se le dice al usuario que contenido vio completo
 
-    public Boolean vioContenidoCompleto(List<Contenido> contenido) {return contenido.fueVistoCompletaX();
-      //  return getContenidoVisto().contains(contenido);
+    public Boolean vioContenidoCompleto(Contenido contenido) {return contenido.fueVistoCompletaX(this);
     }
+    //public Usuario();
 
-    /*public Boolean contQueVioXGenero(Contenido contenido){
-        return contQueVio.stream().map(Contenido->Contenido.getGenero()).
-        distinct().collect( Collectors.toSet());}/*/
 
     public List<Contenido> getContenidoVisto() {
         return contenidoVisto;
     }
-    public void setContenidoVisto(Contenido contenido) {
+    public void setContenidoVisto(List<Contenido> contenido) {
         this.contenidoVisto = contenidoVisto;
     }
 

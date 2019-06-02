@@ -1,23 +1,28 @@
-public class Capitulo implements Contenido{
+public class Capitulo extends ContenidoUnitario{
+    protected Integer duracion;
+    protected String genero;
+    protected String numeroCap;
 
-    public Integer duracion;
-    public String genero;
-    Integer numCap;
-    Integer duracionxCap;
-
-    public Capitulo(Integer numCap, Integer duracionxCap){
-        this.numCap=numCap;
-        this.duracionxCap=duracionxCap;
-    }
-
-    public Boolean fueVistoCompletaX(Usuario usuario){return true;}
+    protected Capitulo (String numeroCap, String actores, Integer duracion) {
+        this.actores=actores;
+        this.duracion=duracion;
+        this.numeroCap=numeroCap;}
 
 
+    public Boolean fueVistoCompletaX(Usuario usuario){return usuario.getContenidoVisto().contains( usuario );}
 
+    public void setGenero(String genero) {
+        this.genero = genero;}
     public String genero(Contenido contenido) {
-        return genero;
+     return genero;}
+
+    public void setDuracion(Integer minutos) {
+        duracion = duracion;
     }
-    public Integer getDuracionxCap(){return duracionxCap;}
-    public Integer duracion(Contenido contenido){return duracionxCap;}
-}
+    public Integer duracion() {
+        return this.duracion;
+    }
+    protected Boolean generoMasVisto(){return generoMasVisto();}}
+
+
 
