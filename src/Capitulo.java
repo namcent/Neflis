@@ -8,7 +8,6 @@ public class Capitulo extends ContenidoUnitario {
     }
 
 
-    @Override
     public String genero(Contenido contenido) {
         return null;
     }

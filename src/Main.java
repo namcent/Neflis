@@ -19,6 +19,11 @@ public class Main {
         Capitulo capitulo6 = new Capitulo("kristen bell", 33);
         Actor kristenBell = new Actor();
 
+        List<Capitulo> capitulos = new ArrayList<>();
+        capitulos.add(capitulo1);
+        capitulos.add(capitulo2);
+
+
 
 
         yaz.vioContenidoCompleto(frozen);
@@ -26,11 +31,11 @@ public class Main {
         System.out.println("Yaz vio"+ yaz.getContenidoVisto());
 
         List<Serie> series= new ArrayList<>();
-        series.add(new Serie("the good place", 5));
-        series.add(new Serie ("Vis a Vis", 4));
+        series.add(new Serie(3,3,33));
+        series.add(new Serie ());
         List<Temporada> temporadas= new ArrayList<>();
-        temporadas.add(new Temporada(10, 1, 45));
-        temporadas.add(new Temporada (10, 2, 50));
+        temporadas.add(new Temporada());
+        temporadas.add(new Temporada ());
         roma.setContenidoVisto();
     }}
 

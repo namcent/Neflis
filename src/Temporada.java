@@ -6,6 +6,7 @@ public class Temporada {
         return this.capitulo.stream().
                 allMatch(Capitulo -> Capitulo.fueVistoCompletoPor(usuario));
     }
+    
 
 
 }
