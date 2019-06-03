@@ -1,5 +1,5 @@
 public interface Contenido {
-    String genero (Contenido contenido);
+    String genero();
     Boolean fueVistoCompletoPor(Usuario usuario);
-    Integer duracion(Contenido contenido);
+    Integer duracion();
 }

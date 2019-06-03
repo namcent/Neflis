@@ -1,10 +1,8 @@
 public abstract class ContenidoUnitario implements Contenido{
-    public String genero(Contenido contenido) {
-    }
+    protected String actores;
     public Boolean fueVistoCompletoPor(Usuario usuario) {
         return true;
     }
+    protected abstract Boolean generoMasVisto();
 
-    public Integer duracion(Contenido contenido){
-    }
 }

@@ -1,24 +1,32 @@
 public class Pelicula extends ContenidoUnitario{
-    String nombrePelicula;
-    Integer duracionDePelicula;
+    Integer duracion;
     String genero;
+    String actores;
 
 
-    public String genero(Contenido contenido) { return genero;}
-    public Integer duracion( Contenido contenido) {return duracionDePelicula;}
+    protected Pelicula(Integer duracion, String actores, String genero){
+        this.duracion=duracion;
+        this.actores=actores;
+        this.genero=genero;
+    }
 
-
-    public String getGenero() {
+    public void setGenero(String genero){
+        this.genero=genero;
+    }
+    public String genero(Contenido contenido){
         return genero;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setDuracion(Integer minutos){
+        duracion=duracion;
+    }
+    public Integer duracion(){
+        return duracion;
+    }
+    public Boolean fueVistoCompletoPor(Usuario usuario){
+        return usuario.getContenidosVistos().contains(usuario);
     }
 
-    public Pelicula(String nombrePelicula, Integer duracionDePelicula) {
-        this.duracionDePelicula= duracionDePelicula;
-        this.nombrePelicula = nombrePelicula;
-    }
+
 }
 

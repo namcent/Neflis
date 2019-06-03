@@ -1,21 +1,27 @@
 import java.util.List;
 public class Temporada {
-
-
+    String genero;
     private List<Capitulo> capitulo;
     Integer numTemporada;
-    Capitulo cap;
+    private Integer duracion;
 
     public Boolean fueVistoCompletoPor(Usuario usuario) {
         return this.capitulo.stream().
                 allMatch(Capitulo -> Capitulo.fueVistoCompletoPor(usuario));
     }
-    public Temporada(Integer numTemporada, Capitulo cap) {
+    public Temporada(Integer numTemporada, List<Capitulo> capitulo) {
         this.numTemporada= numTemporada;
-        this.cap= cap;
+        this.capitulo=capitulo;
     }
 
-    public Integer duracion(Contenido contenido){ return capitulo.stream()
-            .map(Capitulo -> Capitulo.getDuracionXCap(). sum());
-}
+    public Integer duracion(){ return capitulo.stream()
+            .map(Capitulo -> Capitulo.duracion()).reduce(0,Integer::sum);
+    }
+    public Capitulo ultimoCapituloSerie(){
+        return capitulo.get(capitulo.size()-1);
+    }
+
+    public String genero(Contenido contenido){
+        return genero;
+    }
 }
