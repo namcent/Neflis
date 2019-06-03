@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 
 public class Main {
@@ -27,25 +28,38 @@ public class Main {
         temporadas.add( temporadaA );
         temporadas.add( temporadaB );
 
-        Serie breakingBad = new Serie( "breaking bad", (List<Temporada>)temporadas);
-        Pelicula titanic= new Pelicula(240, "actor4");
+        Serie breakingBad = new Serie( "breaking bad", (List<Temporada>)temporadas, "drama");
+        Pelicula titanic= new Pelicula(240, "actor4", "romance");
 
         List<Contenido>contenidoVisto=new ArrayList<>(  );
         contenidoVisto.add(breakingBad);
         contenidoVisto.add(titanic);
-        //breakingBad.fueVistoCompletaX( yaz );
-        yaz.setContenidoVisto(contenidoVisto);
-        yaz.getContenidoVisto();
-        //yaz.vioContenidoCompleto( breakingBad );
+
+        breakingBad.setGenero("drama");
+        titanic.setGenero( "romance" );
+
+        List<String>generosqueVio=new ArrayList<>();
+        generosqueVio.add(breakingBad.genero());
+        generosqueVio.add(titanic.genero());
+
+
+        /** ejercicio 1**/
+
+        System.out.println(cap1A.fueVistoCompletaX( yaz )+ " vio cont completo capitulo");
+        System.out.println( yaz.vioContenidoCompleto( titanic ) + " vio cont completo de titanic" );
+        System.out.println(yaz.vioContenidoCompleto( breakingBad )+ " vio cont completo de bb");
 
         /** ejercicio 2**/
         breakingBad.duracion();
         titanic.duracion();
-
-        //System.out.println(yaz.vioContenidoCompleto( breakingBad )+ " vio cont completo de bb");
+        System.out.println( temporadaA.duracion()+" duracion una temporada" );
         System.out.println(breakingBad.duracion()+ " duracion de cap Breaking bad");
         System.out.println(titanic.duracion()+" duracion titanic");
 
+        /** ejercicio 3**/
         breakingBad.ultimoCapituloSerie();
         System.out.println( breakingBad.ultimoCapituloSerie().numeroCap+ " Ultimo capitulo de la serie" );
+
+        /** ejercicio 4**/
+        System.out.println(yaz.generosqueVio()+ " generos que vio");
     }}

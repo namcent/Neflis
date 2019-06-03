@@ -9,11 +9,13 @@ public class Capitulo extends ContenidoUnitario{
         this.numeroCap=numeroCap;}
 
 
-    public Boolean fueVistoCompletaX(Usuario usuario){return usuario.getContenidoVisto().contains( usuario );}
+    public Boolean fueVistoCompletaX(Usuario usuario){
+        return usuario.getContenido().contains( usuario );}
+
 
     public void setGenero(String genero) {
         this.genero = genero;}
-    public String genero(Contenido contenido) {
+    public String genero() {
      return genero;}
 
      /**tengo duracion de un capitulo**/
@@ -23,8 +25,9 @@ public class Capitulo extends ContenidoUnitario{
     public Integer duracion() {
         return this.duracion;
     }
+}
 
-    protected Boolean generoMasVisto(){return generoMasVisto();}}
+    //protected Boolean generoMasVisto(){return generoMasVisto();}}
 
 
 
