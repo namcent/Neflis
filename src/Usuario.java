@@ -19,10 +19,10 @@ public class Usuario {
     public void setContenido(List<Contenido> contenidoVisto) {
         this.contenidoVisto = contenidoVisto;
     }
+    /** generos que ve el usuario**/
     public List<String> generosqueVio(){
         return contenidoVisto.stream().map( contenidoVisto -> contenidoVisto.genero())
                 .distinct().collect( Collectors.toList());}
-
 
     public Integer minVistosxGenero(String genero){return
                 contenidoVisto.stream().filter( contenido->contenido.genero()

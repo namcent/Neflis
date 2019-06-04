@@ -32,7 +32,6 @@ public class Capitulo extends ContenidoUnitario{
     }
 }
 
-    //protected Boolean generoMasVisto(){return generoMasVisto();}}
 
 
 

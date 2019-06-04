@@ -19,9 +19,7 @@ public class Serie implements Contenido {
         return temporadas.stream().map( t -> t.duracion() )
                 .reduce( 0, Integer::sum );
     }
-    /**
-     * 3 ejercicio
-     **/
+    /** 3 ejercicio**/
     public Capitulo ultimoCapituloSerie() {
         return temporadas.get( temporadas.size() - 1 ).ultimoCapituloSerie();
     }
