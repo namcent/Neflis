@@ -13,7 +13,6 @@ public class Usuario {
     public Boolean vioContenidoCompleto(Contenido contenido) {
         return this.contenidoVisto.contains( contenido );
     }
-<<<<<<< HEAD
     public List<Contenido> getContenido() {
         return contenidoVisto;
     }
