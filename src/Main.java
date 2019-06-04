@@ -38,10 +38,10 @@ public class Main {
         contenidoVisto.add(breakingBad);
         contenidoVisto.add(titanic);
 
-        yaz.setContenido(contenidoVisto);
+
 
         /** ejercicio 1**/
-
+        yaz.setContenido(contenidoVisto);
         System.out.println(cap1A.fueVistoCompletaX( yaz )+ " vio cont completo capitulo");
         System.out.println( yaz.vioContenidoCompleto( titanic ) + " vio cont completo de titanic" );
         System.out.println(yaz.vioContenidoCompleto( breakingBad )+ " vio cont completo de bb");
@@ -65,12 +65,12 @@ public class Main {
         temporadaA.setSerie( breakingBad );
         temporadaB.setSerie( breakingBad );
 
-        System.out.println(cap1A.genero());
-        System.out.println( temporadaA.genero() );
-        System.out.println( breakingBad.genero() );
-        System.out.println( titanic.genero() );
+        System.out.println(cap1A.genero()+ " genero cap");
+        System.out.println( temporadaA.genero() + "genero temporada");
+        System.out.println( breakingBad.genero() + " genero bb");
+        System.out.println( titanic.genero() + "genero titanic");
 
-        yaz.generosqueVio().stream().forEach( genero-> System.out.println(genero +" genero que vio"));
+        yaz.generosqueVio().stream().forEach( genero-> System.out.println(genero +" generosss que vio"));
         System.out.println( yaz.generosqueVio() );
         /** ejercicio 5**/
 
