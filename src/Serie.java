@@ -1,5 +1,4 @@
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Serie implements Contenido {
     String nombreSerie;
@@ -17,7 +16,8 @@ public class Serie implements Contenido {
                 allMatch( temporadas -> temporadas.fueVistoCompletaX( usuario ) );
     }
     public Integer duracion() {
-        return temporadas.stream().map( t -> t.duracion() ).reduce( 0, Integer::sum );
+        return temporadas.stream().map( t -> t.duracion() )
+                .reduce( 0, Integer::sum );
     }
     /**
      * 3 ejercicio
@@ -33,7 +33,7 @@ public class Serie implements Contenido {
     public String genero() {
         return genero;
     }
-
+    //public Boolean actorActuo(){}
 
 }
 

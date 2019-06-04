@@ -9,6 +9,9 @@ public class Main {
     public static void main(String []Args) {
 
         Usuario yaz = new Usuario();
+        Usuario nadia=new Usuario();
+        Usuario roma= new Usuario();
+        Usuario nats= new Usuario();
 
         Capitulo cap1A = new Capitulo( "cap1A", "actor1", 60 );
         Capitulo cap1B = new Capitulo( "cap1B", "actor2", 58 );
@@ -29,19 +32,13 @@ public class Main {
         temporadas.add( temporadaB );
 
         Serie breakingBad = new Serie( "breaking bad", (List<Temporada>)temporadas, "drama");
-        Pelicula titanic= new Pelicula(240, "actor4", "romance");
+        Pelicula titanic= new Pelicula(240, "Di Caprio", "romance");
 
         List<Contenido>contenidoVisto=new ArrayList<>(  );
         contenidoVisto.add(breakingBad);
         contenidoVisto.add(titanic);
 
-        breakingBad.setGenero("drama");
-        titanic.setGenero( "romance" );
-
-        List<String>generosqueVio=new ArrayList<>();
-        generosqueVio.add(breakingBad.genero());
-        generosqueVio.add(titanic.genero());
-
+        yaz.setContenido(contenidoVisto);
 
         /** ejercicio 1**/
 
@@ -61,5 +58,21 @@ public class Main {
         System.out.println( breakingBad.ultimoCapituloSerie().numeroCap+ " Ultimo capitulo de la serie" );
 
         /** ejercicio 4**/
-        System.out.println(yaz.generosqueVio()+ " generos que vio");
+        cap1A.setSerie( breakingBad );
+        cap1B.setSerie( breakingBad );
+        cap2B.setSerie( breakingBad );
+
+        temporadaA.setSerie( breakingBad );
+        temporadaB.setSerie( breakingBad );
+
+        System.out.println(cap1A.genero());
+        System.out.println( temporadaA.genero() );
+        System.out.println( breakingBad.genero() );
+        System.out.println( titanic.genero() );
+
+        yaz.generosqueVio().stream().forEach( genero-> System.out.println(genero +" genero que vio"));
+        System.out.println( yaz.generosqueVio() );
+        /** ejercicio 5**/
+
     }}
+

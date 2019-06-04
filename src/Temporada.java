@@ -1,29 +1,30 @@
 
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 public class Temporada implements Contenido {
     private List<Capitulo> capitulo;
     Integer numTemp;
     private Integer duracion;
+    public String genero;
 
     public Temporada(Integer numTemp, List<Capitulo>capitulo){
         this.capitulo=capitulo;
         this.numTemp=numTemp;
     }
-
-    public String genero;
-
-
+    public Serie serie;
+    public void setSerie(Serie serie){this.serie=serie;}
     public Boolean fueVistoCompletaX(Usuario usuario) {
         return this.capitulo.stream().
                 allMatch( capitulo -> capitulo.fueVistoCompletaX( usuario ) );
     }
+    public Temporada(Serie serie){this.serie=serie;}
+    public void setGenero(String genero){this.genero=genero;}
+
     public String genero() {
-        return genero;
-    }
+        return this.serie.genero();}
+
 
     /**obtengo duracion de cada capitulo sumado**/
     public Integer duracion(){

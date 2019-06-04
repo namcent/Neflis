@@ -2,6 +2,7 @@ public class Pelicula extends ContenidoUnitario{
 
     public String genero;
     public Integer duracion;
+    public Boolean actorActuo;
 
     protected Pelicula(Integer duracion, String actores, String genero){
         this.duracion=duracion;
@@ -21,6 +22,6 @@ public class Pelicula extends ContenidoUnitario{
     }
     //protected Boolean generoMasVisto() {
      //   return generoMasVisto();
-}
-
-
+    public String getActor(){return actores;}}
+    //public Boolean actorActuo(Contenido contenidoVisto){
+    //    return c ; }}
