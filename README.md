@@ -1,5 +1,5 @@
 # Neflis
-*Romina Gonzalez
-*Nadia Centanaro
-*Yazmin Longas
+*Romina Gonzalez <br>
+*Nadia Centanaro <br>
+*Yazmin Longas <br>
 *Natalia Catàn
