@@ -1,40 +1,40 @@
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class Serie implements Contenido{
+public class Serie implements Contenido {
     String nombreSerie;
-    Integer numTemporada;
-    Integer capxTemporada;
-    String[] actoresSerie;
-    String[] actoresInvitadoSerie;
-    Integer minxCap;
-    Integer estaCompleto;
+    private List<Temporada> temporadas;
+    public String genero;
+    public Integer duracion;
 
-    public Series(String nombreSerie, String[] actoresSerie,
-                  String[] actoresInvitadoSerie, Integer numTemporada,
-                  Integer capxTemporada, Integer minxCap) {
+    public Serie(String nombreSerie, List<Temporada> temporadas, String genero) {
         this.nombreSerie = nombreSerie;
-        this.actoresSerie = actoresSerie;
-        this.actoresInvitadoSerie = actoresInvitadoSerie;
-        this.numTemporada = numTemporada;
-        this.capxTemporada = capxTemporada;
-        this.minxCap = minxCap;
+        this.temporadas = temporadas;
+        this.genero=genero;
     }
-    private String genero;
-
-
-    private List<Temporada> temporada;
-
     public Boolean fueVistoCompletaX(Usuario usuario) {
-        return this.temporada.stream().
-                allMatch( T -> T.fueVistoCompletaX( usuario ) );
+        return this.temporadas.stream().
+                allMatch( temporadas -> temporadas.fueVistoCompletaX( usuario ) );
+    }
+    public Integer duracion() {
+        return temporadas.stream().map( t -> t.duracion() ).reduce( 0, Integer::sum );
+    }
+    /**
+     * 3 ejercicio
+     **/
+    public Capitulo ultimoCapituloSerie() {
+        return temporadas.get( temporadas.size() - 1 ).ultimoCapituloSerie();
+    }
+    /** 4 ejercicio**/
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
-    public String getGenero() {
+    public String genero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
 
-    }
 }
+
+
